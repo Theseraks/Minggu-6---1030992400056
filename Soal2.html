@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2 - Bermain dengan Warna</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #9cccfc;
+            text-align: center;
+            max-width: 420px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 22px;
+            color: #333;
+        }
+        button {
+            padding: 6px 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            margin: 4px;
+        }
+        #btnUngu  { background: #7c3aed; color: #fff; }
+        #btnBiru  { background: #2563eb; color: #fff; }
+        #btnHijau { background: #15803d; color: #fff; }
+        #btnSembunyi, #btnTampil { background: #eee; color: #000; }
+
+        #kotak {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            background: #f7f7f7;
+            border: 2px solid #333;
+            border-radius: 8px;
+            transition: background-color 0.5s ease;
+        }
+        p {
+            font-size: 12px;
+            margin: 6px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bermain dengan Warna</h1>
+
+    <div>
+        <button id="btnUngu">Ungu</button>
+        <button id="btnBiru">Biru</button>
+        <button id="btnHijau">Hijau</button>
+    </div>
+
+    <div id="kotak"></div>
+
+    <div>
+        <button id="btnSembunyi">Sembunyikan Kotak</button>
+        <button id="btnTampil">Tampilkan Kotak</button>
+    </div>
+
+    <p>Klik tombol warna untuk mengubah warna kotak.</p>
+    <p>Gunakan tombol Sembunyikan dan Tampilkan untuk menyembunyikan dan menampilkan kotak.</p>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnUngu").click(function () {
+                $("#kotak").css("background-color", "#7c3aed");
+            });
+
+            $("#btnBiru").click(function () {
+                $("#kotak").css("background-color", "#2563eb");
+            });
+
+            $("#btnHijau").click(function () {
+                $("#kotak").css("background-color", "#15803d");
+            });
+
+            $("#btnSembunyi").click(function () {
+                $("#kotak").hide();
+            });
+
+            $("#btnTampil").click(function () {
+                $("#kotak").show();
+            });
+        });
+    </script>
+</body>
+</html>

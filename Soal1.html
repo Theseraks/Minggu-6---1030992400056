@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAMA dan NIM</title>
+    <style>
+        .card {
+            background: #fff;
+            width: 320px;
+            padding: 20px 30px;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #ddd;
+            padding: 8px 0;
+            font-size: 16px;
+            outline: none;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+</script>
+    <h1>Form Input</h1>
+    <form>
+        <label for="inputNama">Nama:</label>
+        <input type="text" id="inputNama" name="nama"><br><br>
+        <label for="inputNim">NIM:</label>
+        <input type="text" id="inputNim" name="nim"><br><br>
+    </form>
+
+    <script>
+        function validateForm() {
+            var nama = document.getElementById("inputNama").value;
+            var nim = document.getElementById("inputNim").value;
+
+            if (nama === "" || nim === "") {
+                alert("Nama dan NIM harus diisi!");
+                return false;
+            }
+            return true;
+        }
+        
+        window.onload = function () {
+            var nama = prompt("Masukkan nama kamu:");
+            var nim = prompt("Masukkan nim kamu:");
+
+            if (nama !== null) {
+                document.getElementById("inputNama").value = nama;
+            }
+            if (nim !== null) {
+                document.getElementById("inputNim").value = nim;
+            }
+    };
+</script>
+</body>
+</html>
